@@ -1,0 +1,13 @@
+Package: consec
+Type: Package
+Title: consec
+Version: 0.1.0
+Date: 2026-09-08
+Description: Consecutive arithmetic procedures.
+Authors@R: c(person(given = "Tingting", family = "Zhan", role = c("aut", "cre"), email = "tingtingzhan@gmail.com"))
+Language: en-US
+Encoding: UTF-8
+License: GPL-2
+Depends: R (>= 4.6)
+Config/roxygen2/version: 8.1.0
+Config/roxygen2/markdown: TRUE
