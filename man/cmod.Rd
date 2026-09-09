@@ -11,7 +11,7 @@ cmod(e1, e2, pattern_allow_multiple, n, ...)
 
 \item{e2}{named \link[base]{numeric} \link[base]{vector}}
 
-\item{pattern_allow_multiple}{\link[base]{character} scalar, a \link[base]{regex}}
+\item{pattern_allow_multiple}{(optional) \link[base]{character} scalar, a \link[base]{regex}}
 
 \item{n}{\link[base]{integer} scalar}
 

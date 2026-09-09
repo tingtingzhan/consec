@@ -2,7 +2,7 @@ Package: consec
 Type: Package
 Title: consec
 Version: 0.1.0
-Date: 2026-09-08
+Date: 2026-09-09
 Description: Consecutive arithmetic procedures.
 Authors@R: c(person(given = "Tingting", family = "Zhan", role = c("aut", "cre"), email = "tingtingzhan@gmail.com"))
 Language: en-US

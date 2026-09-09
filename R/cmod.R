@@ -5,7 +5,7 @@
 #' 
 #' @param e2 named \link[base]{numeric} \link[base]{vector}
 #' 
-#' @param pattern_allow_multiple \link[base]{character} scalar, a \link[base]{regex}
+#' @param pattern_allow_multiple (optional) \link[base]{character} scalar, a \link[base]{regex}
 #' 
 #' @param n \link[base]{integer} scalar
 #' 
@@ -40,9 +40,11 @@ cmod <- \(e1, e2, pattern_allow_multiple, n, ...) {
   
   rm(m)
   
-  id <- nm2 |>
-    grepl(pattern = pattern_allow_multiple)
-  if (any(z[!id,] %notin% c(0, 1, NA_integer_))) stop()
+  if (!missing(pattern_allow_multiple)) {
+    id <- nm2 |>
+      grepl(pattern = pattern_allow_multiple)
+    if (any(z[!id,] %notin% c(0, 1, NA_integer_))) stop()
+  } else id <- TRUE # all units allow multiple
   
   ret <- array('', dim = dim(z))
   ret[id,] <- ifelse(z[id,] > 0, yes = paste0(z[id,], nm2[id]), no = NA_character_)
