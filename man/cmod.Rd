@@ -4,14 +4,12 @@
 \alias{cmod}
 \title{Consecutive Modulo}
 \usage{
-cmod(e1, e2, pattern_allow_multiple, n, ...)
+cmod(e1, e2, n, ...)
 }
 \arguments{
 \item{e1}{\link[base]{numeric} scalar or \link[base]{vector}}
 
 \item{e2}{named \link[base]{numeric} \link[base]{vector}}
-
-\item{pattern_allow_multiple}{(optional) \link[base]{character} scalar, a \link[base]{regex}}
 
 \item{n}{\link[base]{integer} scalar}
 
