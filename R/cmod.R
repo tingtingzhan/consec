@@ -69,17 +69,10 @@ cmod <- \(e1, e2, n, ...) {
 #' @param ... ..
 #' 
 #' @examples
-#' x1 = c(
-#'  Cup = 48, '\u2154Cup' = 48*2/3, '\u00bdCup' = 48/2,
-#'  '\u2153Cup' = 48/3, '\u00bcCup' = 48/4, 
-#'  Tbsp = 3, '2tsp' = 2, '1\u00bdtsp' = 1.5, '1tsp' = 1,
-#'  '\u00bdtsp' = .5,
-#'  '\u00bctsp' = 1/4,
-#'  '\u215btsp' = 1/8)
-#' x1 |> allow_multiple()
+#' teaspoon |> allow_multiple()
+#' teaspoon2 |> allow_multiple()
 #' 
-#' x2 = c(day = 60*24, hour = 60, min = 1)
-#' x2 |> allow_multiple()
+#' c(day = 60*24, hour = 60, min = 1) |> allow_multiple()
 #' @export
 allow_multiple <- \(x, tol = .Machine$double.eps, ...) {
   
