@@ -6,3 +6,6 @@
 
 #' @rdname units
 'teaspoon2'
+
+#' @rdname units
+'floz'

@@ -5,16 +5,21 @@
 \alias{units}
 \alias{teaspoon}
 \alias{teaspoon2}
+\alias{floz}
 \title{units}
 \format{
 An object of class \code{numeric} of length 12.
 
 An object of class \code{numeric} of length 9.
+
+An object of class \code{numeric} of length 5.
 }
 \usage{
 teaspoon
 
 teaspoon2
+
+floz
 }
 \description{
 units
