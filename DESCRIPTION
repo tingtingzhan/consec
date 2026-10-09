@@ -2,7 +2,7 @@ Package: consec
 Type: Package
 Title: Consecutive Arithmetic Procedures
 Version: 0.1.0
-Date: 2026-09-19
+Date: 2026-10-09
 Description: Consecutive arithmetic procedures.
 Authors@R: c(person(given = "Tingting", family = "Zhan", role = c("aut", "cre"), email = "tingtingzhan@gmail.com"))
 LazyData: true
@@ -11,5 +11,5 @@ Language: en-US
 Encoding: UTF-8
 License: GPL-2
 Depends: R (>= 4.6)
-Config/roxygen2/version: 8.1.0
+Config/roxygen2/version: 8.1.1
 Config/roxygen2/markdown: TRUE
