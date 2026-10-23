@@ -8,7 +8,7 @@
 \alias{floz}
 \title{units}
 \format{
-An object of class \code{numeric} of length 12.
+An object of class \code{numeric} of length 13.
 
 An object of class \code{numeric} of length 9.
 
