@@ -10,20 +10,18 @@ mod_(e1, e2, tol = .Machine$double.eps, ...)
 \item{e1, e2}{\link[base]{numeric} \link[base]{vector}s,
 the shorter length will be recycled}
 
-\item{tol}{\link[base]{double} scalar, default \code{.Machine$double.eps}}
+\item{tol}{\link[base]{double} scalar, default value is \code{.Machine$double.eps}}
 
 \item{...}{additional parameters, currently not in use}
 }
 \value{
-The function \code{\link[=mod_]{mod_()}} returns a \link[base]{numeric} scalar or \link[base]{vector} of the integer division (similar to function \link[base]{\%/\%}), with an \link[base]{attributes}
+The function \code{\link[=mod_]{mod_()}} returns a \link[base]{numeric} scalar or \link[base]{vector} of the integer division (similar to the function \link[base]{\%/\%}), with an \link[base]{attributes}
 \describe{
 \item{\code{attr(,'e1')}}{\link[base]{numeric} scalar or \link[base]{vector}, the modulo (similar to the function \link[base]{\%\%})}
 }
 }
 \description{
-Integer division (see function \link[base]{\%/\%}) and
-modulo (see function \link[base]{\%\%})
-at a user-specified \code{tol}erance.
+Integer division (see the function \link[base]{\%/\%}) and modulo (see the function \link[base]{\%\%}) at a user-specified \code{tol}erance.
 }
 \examples{
 x0 = 48*2 - .Machine$double.eps*1e1

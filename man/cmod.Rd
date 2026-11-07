@@ -18,3 +18,8 @@ cmod(e1, e2, n, ...)
 \description{
 Consecutive Modulo
 }
+\examples{
+29.3 |>
+ cmod(e2 = teaspoon, n = 4L)
+
+}

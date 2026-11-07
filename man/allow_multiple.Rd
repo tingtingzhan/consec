@@ -9,9 +9,9 @@ allow_multiple(x, tol = .Machine$double.eps, ...)
 \arguments{
 \item{x}{\link[base]{numeric} \link[base]{vector}}
 
-\item{tol}{..}
+\item{tol}{\link[base]{double} scalar, default value is \code{.Machine$double.eps}}
 
-\item{...}{..}
+\item{...}{additional parameters, currently not in use}
 }
 \description{
 Allow Multiple?
@@ -19,6 +19,7 @@ Allow Multiple?
 \examples{
 teaspoon |> allow_multiple()
 teaspoon2 |> allow_multiple()
+floz |> allow_multiple()
 
 c(day = 60*24, hour = 60, min = 1) |> allow_multiple()
 }
