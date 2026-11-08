@@ -12,6 +12,10 @@
 #' @examples
 #' 29.3 |>
 #'  cmod(e2 = teaspoon, n = 4L)
+#'  
+#' (Sys.Date() - as.Date('2020-01-01')) |>
+#'  as.numeric() |>
+#'  cmod(e2 = day, n = 5L)
 #' 
 #' @importFrom stats na.omit
 #' @importFrom utils head

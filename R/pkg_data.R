@@ -9,3 +9,6 @@
 
 #' @rdname units
 'floz'
+
+#' @rdname units
+'day'

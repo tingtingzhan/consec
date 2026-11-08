@@ -24,8 +24,16 @@ floz = c(29.5735 * c(
   'fl.oz.' = 1 # fluid ounce
 ), ml = 1)
 
+# base::`units<-.difftime`
+day = c(
+  year = (365*4+1)/4,
+  month = (365*4+1)/4/12,
+  week = 7,
+  day = 1
+)
 
-save(list = c('teaspoon', 'teaspoon2', 'floz'), 
+
+save(list = c('teaspoon', 'teaspoon2', 'floz', 'day'), 
      file = './data/units.rda', compress = 'xz')
 
 rm(list = ls(all.names = TRUE))
