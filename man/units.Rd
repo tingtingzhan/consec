@@ -7,6 +7,7 @@
 \alias{teaspoon2}
 \alias{floz}
 \alias{day}
+\alias{minute}
 \title{units}
 \format{
 An object of class \code{numeric} of length 13.
@@ -14,6 +15,8 @@ An object of class \code{numeric} of length 13.
 An object of class \code{numeric} of length 9.
 
 An object of class \code{numeric} of length 5.
+
+An object of class \code{numeric} of length 4.
 
 An object of class \code{numeric} of length 4.
 }
@@ -25,6 +28,8 @@ teaspoon2
 floz
 
 day
+
+minute
 }
 \description{
 units

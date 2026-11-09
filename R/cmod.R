@@ -85,8 +85,8 @@ cmod <- \(e1, e2, n, ...) {
 #' teaspoon |> allow_multiple()
 #' teaspoon2 |> allow_multiple()
 #' floz |> allow_multiple()
-#' 
-#' c(day = 60*24, hour = 60, min = 1) |> allow_multiple()
+#' day |> allow_multiple()
+#' minute |> allow_multiple()
 #' @export
 allow_multiple <- \(x, tol = .Machine$double.eps, ...) {
   

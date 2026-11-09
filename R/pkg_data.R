@@ -12,3 +12,6 @@
 
 #' @rdname units
 'day'
+
+#' @rdname units
+'minute'

@@ -20,6 +20,6 @@ Allow Multiple?
 teaspoon |> allow_multiple()
 teaspoon2 |> allow_multiple()
 floz |> allow_multiple()
-
-c(day = 60*24, hour = 60, min = 1) |> allow_multiple()
+day |> allow_multiple()
+minute |> allow_multiple()
 }
