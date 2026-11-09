@@ -27,3 +27,5 @@ c(NA, 29.3) |>
  cmod(e2 = day, n = 5L)
 
 }
+\keyword{consecutive}
+\keyword{modulo}

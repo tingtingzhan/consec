@@ -19,6 +19,7 @@
 #' 
 #' @importFrom stats na.omit
 #' @importFrom utils head
+#' @keywords consecutive modulo
 #' @export
 cmod <- \(e1, e2, n, ...) {
   
