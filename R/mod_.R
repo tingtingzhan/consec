@@ -31,15 +31,27 @@
 #' mod_(x, e2 = 48, tol = 1e-6) # yeah!
 #' @export
 mod_ <- \(e1, e2, tol = .Machine$double.eps, ...) {
+  
   z <- e1 %/% e2 # floored integer division
   m <- e1 %% e2 # modulo
+  
+  # (10.7 %/% 2L) |> typeof() # 'double'
+  if (any(abs(z - as.integer(z)) > .Machine$double.eps, na.rm = TRUE)) {
+    stop('should not happen!!')
+  }
+  storage.mode(z) <- 'integer'
+  
+  storage.mode(m) <- 'double' # not necessary, just for symmetry
+  
   id <- which(abs(m - e2) < tol) # takes care of NA
   if (length(id)) {
-    z[id] <- z[id] + 1
-    m[id] <- 0
+    z[id] <- z[id] + 1L # integer
+    m[id] <- 0 # double
   }
+
   attr(z, which = 'mod') <- m
   return(z)
+  
 }
 
 

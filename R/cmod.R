@@ -10,7 +10,7 @@
 #' @param ... additional parameters of the function [mod_()]
 #' 
 #' @examples
-#' 29.3 |>
+#' c(NA, 29.3) |>
 #'  cmod(e2 = teaspoon, n = 4L)
 #'  
 #' (Sys.Date() - as.Date('2020-01-01')) |>
@@ -28,9 +28,8 @@ cmod <- \(e1, e2, n, ...) {
   
   id <- e2 |>
     allow_multiple(...)
-  nm2 <- names(e2)
     
-  z <- array(NA_integer_, dim = c(n1, n2), dimnames = list(NULL, nm2))
+  z <- array(NA_integer_, dim = c(n1, n2), dimnames = list(NULL, names(e2)))
   
   for (i in seq_len(n2)) {
     if (i == 1L) {
@@ -48,28 +47,30 @@ cmod <- \(e1, e2, n, ...) {
   rm(m)
   
   if (!all(id)) {
-    if (any(z[,!id] %notin% c(0, 1, NA_integer_))) stop()
+    if (any(z[,!id] %notin% c(0L, 1L, NA_integer_))) stop()
   }
   
-  ifelse(
-    test = z > 0, 
-    yes = ifelse(
-      test = grepl(pattern = '^[a-z|A-Z]', x = nm2),
-      yes = z,
-      no = ''
-    ) |>
-      paste0(nm2), 
-    no = NA_character_
-  ) |>
-    array(dim = dim(z)) |>
+  z[which(z == 0L)] <- NA_character_
+  
+  z |>
     apply(MARGIN = 1L, FUN = \(i) {
-      i |> 
-        na.omit() |>
+      i <- i |> 
+        na.omit()
+      if (!length(i)) return('') # for human reader
+      nm <- names(i)
+      ifelse(
+        test = grepl(pattern = '^[a-z|A-Z]', x = nm), 
+        yes = paste0(i, nm), 
+        no = nm
+      ) |>
         head(n = n) |>
-        paste(collapse = ' ')
+        paste(collapse = ' ') # !length(i) compatible, actually
     }, simplify = TRUE)
   
 }
+
+
+
 
 
 

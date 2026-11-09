@@ -19,7 +19,7 @@ cmod(e1, e2, n, ...)
 Consecutive Modulo
 }
 \examples{
-29.3 |>
+c(NA, 29.3) |>
  cmod(e2 = teaspoon, n = 4L)
  
 (Sys.Date() - as.Date('2020-01-01')) |>
