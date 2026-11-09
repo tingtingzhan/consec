@@ -29,6 +29,7 @@
 #' x %% 48 # nah
 #' 
 #' mod_(x, e2 = 48, tol = 1e-6) # yeah!
+#' @keywords integer-division modulo tolerance
 #' @export
 mod_ <- \(e1, e2, tol = .Machine$double.eps, ...) {
   

@@ -34,3 +34,6 @@ x \%\% 48 # nah
 
 mod_(x, e2 = 48, tol = 1e-6) # yeah!
 }
+\keyword{integer-division}
+\keyword{modulo}
+\keyword{tolerance}
